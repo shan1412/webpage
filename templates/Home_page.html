@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Web Page</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/Home_pagestyle.css') }}">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="/home">Home</a></li>
+				<li class="logout"><a href="#">Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<nav>
+		<div class="button-container">
+			<button><a href="Constituency.html">Constituency</a></button>
+			<button><a href="District.html">District</a></button>
+			<button><a href="Scheme.html">Scheme</a></button>
+		</div>
+		</nav>
+	</main>
+</body>
+</html>
