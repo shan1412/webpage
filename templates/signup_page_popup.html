@@ -2,12 +2,22 @@
 <html>
 <head>
 	<title>Signup Page</title>
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/signup_page.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/styles/signup_page.css') }}">
+	<script>
+		function validateForm() {
+			var password = document.forms["signup-form"]["password"].value;
+			var confirm_password = document.forms["signup-form"]["confirm_password"].value;
+			if (password != confirm_password) {
+				alert("Passwords do not match!");
+				return false;
+			}
+		}
+	</script>
 </head>
 <body>
 	<div class="signup-box">
 		<h2>Signup</h2>
-		<form method="post" action="/signuplogin">
+		<form name="signup-form" onsubmit="return validateForm()" action="/signuplogin">
 			<div class="user-box">
 				<input type="text" name="username" required="">
 				<label>Username</label>

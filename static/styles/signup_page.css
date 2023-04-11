@@ -1,92 +1,51 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-body {
-	background: linear-gradient(to bottom, #00C9FF, #92FE9D);
-}
-
-.password-reset-box {
-	width: 350px;
-	height: 600px;
-	background: #fff;
-	color: #000;
-	top: 50%;
-	left: 50%;
-	position: absolute;
-	transform: translate(-50%, -50%);
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-	padding: 70px 30px;
-	box-sizing: border-box;
-}
-
-h2 {
-	margin: 0;
-	padding: 0;
-	font-size: 22px;
+.signup-box {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	max-width: 500px;
+	margin: auto;
+	padding: 30px;
 	text-align: center;
+  }
+  
+  .signup-box h2 {
+	font-size: 32px;
 	margin-bottom: 30px;
-}
-
-.password-reset-box form div {
+  }
+  
+  .user-box {
+	margin-bottom: 20px;
 	position: relative;
-}
-
-.password-reset-box form div label {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 10px 0;
+  }
+  
+  .user-box input {
+	border: none;
+	border-bottom: 2px solid #999;
 	font-size: 16px;
-	color: #000;
-	pointer-events: none;
-	transition: 0.5s;
-}
-
-.password-reset-box form div input {
+	margin-bottom: 10px;
+	padding: 10px 0;
 	width: 100%;
-	padding: 10px 0;
-	margin-bottom: 30px;
-	border: none;
-	border-bottom: 1px solid #000;
-	background: transparent;
-	outline: none;
+  }
+  
+  .user-box label {
+	color: #999;
 	font-size: 16px;
-	color: #000;
-}
-
-.password-reset-box form div input:focus ~ label,
-.password-reset-box form div input:valid ~ label {
-	top: -20px;
 	left: 0;
-	color: #00C9FF;
-	font-size: 14px;
-}
-
-.password-reset-box input[type="button"] {
+	pointer-events: none;
+	position: absolute;
+	top: 10px;
+	transition: 0.2s;
+  }
+  
+  .user-box input:focus ~ label,
+  .user-box input:valid ~ label {
+	font-size: 12px;
+	top: -10px;
+  }
+  
+  .signup-box input[type="submit"] {
+	background-color: #00bcd4;
 	border: none;
-	outline: none;
-	height: 40px;
-	color: #fff;
-	font-size: 18px;
-	background: #00C9FF;
-	cursor: pointer;
 	border-radius: 20px;
-}
-
-.password-reset-box input[type="button"]:hover {
-	background: #92FE9D;
-}
-
-.password-reset-box input[type="password"] {
-	border: none;
-	outline: none;
-	height: 40px;
-	padding: 10px 0;
-	color: #000;
-	font-size: 16px;
-	background: transparent;
-	border-bottom: 1px
-}
+	color: #01090a
+  }  

@@ -1,0 +1,49 @@
+<!-- send_otp.html -->
+<!DOCTYPE html>
+<html>
+  <style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		input[type="email"] {
+			padding: 10px;
+			font-size: 16px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-bottom: 20px;
+			width: 300px;
+		}
+		button {
+			padding: 10px 20px;
+			font-size: 16px;
+			background-color: #008CBA;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		#message {
+			margin-top: 20px;
+			color: #008CBA;
+			font-weight: bold;
+			display: none;
+		}
+	</style>
+<head>
+  <title>Forgot Password - Send OTP</title>
+</head>
+<body>
+
+  <h2>Reset-Password</h2>
+  
+  <form action="/send_otp" method="POST">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" {{email}} required>
+    <button type="submit">Send OTP</button>
+  </form>
+  
+</body>
+</html>

@@ -1,6 +1,6 @@
 header {
 	display: flex;
-	justify-content: space-between;
+	justify-content: right;
 	align-items: center;
 	padding: 10px;
 	background-color: #333;
@@ -24,7 +24,7 @@ nav ul li a {
 }
 
 .logout {
-	scroll-margin-right: 0;
+	scroll-margin-right:0;
 	float: right;
 }
 
