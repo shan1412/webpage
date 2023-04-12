@@ -1,0 +1,99 @@
+<!-- send_otp.html -->
+<!DOCTYPE html>
+<html>
+  <style>
+.signup-box {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	max-width: 500px;
+	margin: auto;
+	padding: 30px;
+	text-align: center;
+  }
+  
+  .signup-box h2 {
+	font-size: 32px;
+	margin-bottom: 30px;
+  }
+  
+  .user-box {
+	margin-bottom: 20px;
+	position: relative;
+  }
+  
+  .user-box input {
+	border: none;
+	border-bottom: 2px solid #999;
+	font-size: 16px;
+	margin-bottom: 20px;
+	padding: 10px 0;
+	width: 50%;
+  }
+  
+  .user-box label {
+	color: #999;
+	font-size: 16px;
+	left: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 20px;
+	transition: 0.5s;
+  }
+  
+  .user-box input:focus ~ label,
+  .user-box input:valid ~ label {
+	font-size: 12px;
+	top: 10px;
+  }
+  
+  .signup-box input[type="submit"] {
+	background-color: #00bcd4;
+	border: none;
+	border-radius: 20px;
+	color: #01090a
+  }  
+  </style>
+<head>
+  <title>Sign-up - Send OTP</title>
+</head>
+<body>
+
+  <h2>Sign-up</h2>
+	<form method="post" action="/signuplogin">
+		<div class="user-box">
+			<input type="text" name="username">
+			<label>Username</label>
+		</div>
+		<br><br>
+		<div class="user-box">
+			<input type="email" name="email" >
+			<label>Email</label>
+			<button class = "btn" onclick="displayClicked()" type="button" href ='/send_otp'  name="send_opt">Send OTP</button>
+			<script>
+				function displayClicked() {
+					alert("OTP Sent to Email");
+				}
+			</script>
+		</div>
+		<div class="user-box">
+				<label for="otp">OTP:</label>
+				<input type="text" id="otp" name="otp" required>
+				<button type="button" name="validateotp">Validate OTP</button>
+		</div>
+		<br><br>
+		<div class="user-box">
+			<input type="password" name="password" >
+			<label>Password</label>
+		</div>
+		<br><br>
+		<div class="user-box">
+			<input type="password" name="confirm_password" >
+			<label>Confirm Password</label>
+		</div>
+		<br><br>
+    <button type="submit" name="sign-up">Sign-up</button>
+  </form>
+  
+</body>
+</html>
